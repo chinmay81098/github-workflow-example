@@ -1,0 +1,19 @@
+{
+  "name": "github-workflow-example",
+  "version": "1.0.1",
+  "description": "workflow example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chinmay81098/github-workflow-example.git"
+  },
+  "author": "Chinmay Jain chinmay81098@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chinmay81098/github-workflow-example/issues"
+  },
+  "homepage": "https://github.com/chinmay81098/github-workflow-example#readme"
+}

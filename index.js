@@ -15,6 +15,6 @@ export function returnQuotient(a, b) {
 }
 
 export function checkIsEven(a) {
-  return a % 2 === 0;
+  return a % 2 === 0
 }
 

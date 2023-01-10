@@ -26,8 +26,7 @@ jobs:
           minor-wording: 'add,feat'
           major-wording: 'major,breaking-change'
           patch-wording: 'patch,fixes'
-          rc-wording: 'stage'
-          preid: 'beta'
+          rc-wording: 'release-beta'
       - name: 🚀 Publish
         run: npm publish --tag beta
         

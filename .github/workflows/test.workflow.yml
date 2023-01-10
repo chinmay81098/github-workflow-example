@@ -14,8 +14,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16.13.0"
+      - name: Authenticate with private NPM package
+        run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" > .npmrc
       - name: 'Install Deps'
         run: yarn install
+      - name: 'Automated Version Bump'
+        uses: 'phips28/gh-action-bump-version@master'
+        env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+         default: prerelease
+         preid: beta
       - name: 🚀 Publish
-        run: yarn publish
+        run: npm publish --tag beta
         

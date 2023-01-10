@@ -22,6 +22,12 @@ jobs:
         uses: 'phips28/gh-action-bump-version@master'
         env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          minor-wording: 'add,feat'
+          major-wording: 'major,breaking-change'
+          patch-wording: 'patch,fixes'
+          rc-wording: 'stage'
+          preid: 'beta'
       - name: 🚀 Publish
         run: npm publish --tag beta
         

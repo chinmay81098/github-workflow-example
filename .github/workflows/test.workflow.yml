@@ -19,12 +19,9 @@ jobs:
       - name: 'Install Deps'
         run: yarn install
       - name: 'Automated Version Bump'
-        uses: remorses/bump-version@js
+        uses: 'phips28/gh-action-bump-version@master'
         env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-         version_file: ./package.json
-         prerelease_tag: beta
       - name: 🚀 Publish
         run: npm publish --tag beta
         
